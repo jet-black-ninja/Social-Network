@@ -39,28 +39,15 @@ void menu2(){
             menu3();
             break;
         case 4:
-            friendrequest();
-            break;
-        case 5:
             friends();
             break;
-        case 6:
+        case 5:
             deleteFriends();
             break;
-        case 7:
-            mainmenu();
-            break();
-        case 8:
-            cout<<"You have successfully Logged out"<<endl;
-            mainmenu();
-            break;
-        case 9:
-            exxit();
-            break;
-        default:
-            cout<<"Invalid Choice. Try Again ..."<<endl;
-            menu2();
-            break;
+        case 6:
+            
+        
+
     }
 }
 #endif 

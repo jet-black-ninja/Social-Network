@@ -55,12 +55,9 @@ void menu2(){
             mainmenu();
             break;
         case 9:
-            exxit();
-            break;
-        default:
-            cout<<"Invalid Choice. Try Again ..."<<endl;
-            menu2();
-            break;
+            
+        
+
     }
 }
 #endif 

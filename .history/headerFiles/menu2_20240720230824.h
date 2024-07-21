@@ -28,39 +28,6 @@ void menu2(){
     int menuChoice ;
     cout<< "Choice : ";
     cin >>menuChoice;
-    switch(menuChoice){
-        case 1:
-            viewposts();
-            break;
-        case 2:
-            viewfriendsposts();
-            break;
-        case 3:
-            menu3();
-            break;
-        case 4:
-            friendrequest();
-            break;
-        case 5:
-            friends();
-            break;
-        case 6:
-            deleteFriends();
-            break;
-        case 7:
-            mainmenu();
-            break();
-        case 8:
-            cout<<"You have successfully Logged out"<<endl;
-            mainmenu();
-            break;
-        case 9:
-            exxit();
-            break;
-        default:
-            cout<<"Invalid Choice. Try Again ..."<<endl;
-            menu2();
-            break;
-    }
+    switch(menuChoice)
 }
 #endif 

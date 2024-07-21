@@ -53,14 +53,9 @@ void menu2(){
         case 8:
             cout<<"You have successfully Logged out"<<endl;
             mainmenu();
-            break;
-        case 9:
-            exxit();
-            break;
-        default:
-            cout<<"Invalid Choice. Try Again ..."<<endl;
-            menu2();
-            break;
+            
+        
+
     }
 }
 #endif 

@@ -59,8 +59,8 @@ void menu2(){
             break;
         default:
             cout<<"Invalid Choice. Try Again ..."<<endl;
-            menu2();
-            break;
+        
+
     }
 }
 #endif 
