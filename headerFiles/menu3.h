@@ -10,7 +10,7 @@ void menu3(){
     ifstream data;
     data.open("database");
 
-    cout<<endl<<"Registered (non friends) users : "<<endl<< string(32,"=") <<endl;
+    cout<<endl<<"Registered (non friends) users : "<<endl<< string(32,'=') <<endl;
     int i = 0 ;
     while(!data.eof()){
         getline(data,line);
@@ -50,7 +50,7 @@ void menu3(){
     string moreFriends = "Y";
     ofstream requests("Requests", ios::app);
     while((moreFriends!= "Y")  || (moreFriends != "y")){
-        cout<<"Choose the number the corres ponds to the desired Friend : ";
+        cout<<"Choose the number the corresponds to the desired Friend : ";
         cin>>friendNumber;
 
         ifstream nonFriends;

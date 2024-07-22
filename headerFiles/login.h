@@ -1,7 +1,7 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
-#include "menu2.h";
+#include "./menu2.h"
 
 int mainMenu();
 

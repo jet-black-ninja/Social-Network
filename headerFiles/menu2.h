@@ -49,7 +49,7 @@ void menu2(){
             break;
         case 7:
             mainmenu();
-            break();
+            break;
         case 8:
             cout<<"You have successfully Logged out"<<endl;
             mainmenu();
