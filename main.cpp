@@ -24,11 +24,11 @@ int numOfUsers = -1;
 int main(){
     string graph_title = "||"+string(39,'=')+"||";
     cout<<graph_title <<endl;
-    cout<<"||"+string(9,' ')+"\e[1mSOCIAL NETWORK IN C++ \e[0m"+string(9,' ')+"||"<<endl;
-    cout<<"|| \e[3mA Social Network Project built in C++]\e[0m"<<endl;
+    cout<<"||"+string(9,' ')+"\e[1mSOCIAL NETWORK IN C++ \e[0m"+string(8,' ')+"||"<<endl;
+    cout<<"|| \e[3mA Social Network Project built in C++]\e[0m||"<<endl;
     listusers();
     ostringstream tstr; tstr <<numOfUsers; string mystr = tstr.str();
     cout<<"||    Number of Registered Users : "<<numOfUsers <<string(6-mystr.size() ,' ')+"||"<<endl;
     cout<< graph_title<<endl;
-    mainMenu();
+    mainmenu();
 }

@@ -4,14 +4,18 @@
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
+#include <chrono>
+#include <thread>
 using namespace std;
+
 
 extern string logname ;
 
 int exxit(){
     cout<<endl << "Program Termination ..." <<endl;
-    usleep(1000000);
+    std::this_thread::sleep_for(std::chrono::microseconds(500ms));
     cout<<"Thanks for visiting "+ logname <<endl;
+    exit(1);
     return 0;
 }
 

@@ -3,7 +3,7 @@
 
 #include "./menu2.h"
 
-int mainMenu();
+int mainmenu();
 
 extern string password;
 extern string logpass;
@@ -14,7 +14,7 @@ void login(){
     if(!data.is_open()) {
         cout<<endl;
         cout<<"You Have To Register First"<<endl;
-        mainMenu();
+        mainmenu();
     }
 
     cout<<endl<<"Write Your Username ";
@@ -31,7 +31,7 @@ void login(){
         if(logname == name && logpass == password){
             cout<<endl;
             cout<<"Successful Login "<<endl;
-            cout<<"\e[3emWelcome ,\e[0m"<<logname <<"\e[3m !\e[0m" <<endl;
+            cout<<"\e[3m Welcome ,\e[0m"<<logname <<"\e[3m !\e[0m" <<endl;
             menu2();
             break;
         } 

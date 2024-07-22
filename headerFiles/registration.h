@@ -9,7 +9,7 @@ extern string regpass;
 
 int registration(){
     ifstream data("database");
-    cout<<endl <<"Write Desired Username : ";
+    cout<< endl <<"Write Desired Username : ";
     getline(cin,regname);
     while(!data.eof()){
         getline(data,name,'\n');
@@ -44,7 +44,7 @@ int registration(){
     newData.close();
 
     cout<<endl;
-    cout<<regname+", you have successfully registered!"<<endl<<endl;
+    cout<<regname+ ", you have successfully registered!" <<endl<<endl;
     cout<<"What would you like to do: "<<endl<< string(24, '=')<<endl;
     cout<<"[1] Log In"<<endl;
     cout<<"[2] Return to Main Menu"<<endl;
@@ -52,7 +52,7 @@ int registration(){
     cout<<"Choice : ";
 
     int regChoice ;
-    cin>>regChoice;
+    cin >> regChoice;
     cin.ignore();
     switch(regChoice){
         case 1:
