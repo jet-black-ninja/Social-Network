@@ -32,17 +32,20 @@ void viewfriendsposts(){
         while(myChoice == "y" || myChoice == "Y"){
             ifstream friends;
             friends.open(logname.c_str());
-            cout<<endl<<"Your Friends are : "<<endl << string(19,'=')<<endl;
+            cout<<endl<<"Your Friends are : "<< endl << string(19,'=')<<endl;
             int j =1 ;
             while(getline(friends,Friend) && Friend != ""){
-                    cout<<"["<<j<<"]"<<Friend<<endl;
+                    cout<<"["<<j<<"] "<< Friend<< endl;
                     j++;
             }
             friends.close();
+
             string tempFriend;
+
             cout<<endl<<"Choose the number of friend you want to view post of : ";
             int friendNum;
             cin>>friendNum;
+
             int l = 0;
             ifstream  myFriends(logname.c_str());
             ofstream  postTemp("Temp");
@@ -50,7 +53,7 @@ void viewfriendsposts(){
             while(!myFriends.eof()){
                 l++;
                 getline(myFriends,Friend);
-                if(friendNum == 1){
+                if(friendNum == l){
                     cout<<endl<<"Friend : "<<Friend <<endl<<string(Friend.size(),'=')+"==========" << endl;
                     int i = 1;
                     ifstream allPosts;
@@ -59,8 +62,8 @@ void viewfriendsposts(){
                         getline(allPosts,name,'\n');
                         getline(allPosts,posts,'\n');
                         if(name== Friend){
-                            cout<<" Post " <<i <<" : "<<posts<<endl;
-                            postTemp<<posts<<endl;
+                            cout<<" Post " << i <<" : "<< posts << endl;
+                            postTemp << posts << endl;
                             i++;
                         }
                         tempFriend= Friend;
@@ -72,6 +75,8 @@ void viewfriendsposts(){
             }
             postTemp.close();
             string moreReplies = "Y";
+
+            // process to reply to a friend's posts
             while(moreReplies== "Y"|| moreReplies == "y"){
                 cout<<endl<<"Choose the post you wish to reply to \e[3m(type the number)\e[0m : ";
                 int numReply;

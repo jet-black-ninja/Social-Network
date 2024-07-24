@@ -16,9 +16,10 @@ void viewposts(){
     ifstream allPosts;
     allPosts.open("posts");// open file containing all posts
     int lineCount = 1;
+    //repeat process to print all of the user's posts
     while(!allPosts.eof()){
-        getline(allPosts, name ,'\n');
-        getline(allPosts,posts,'\n');
+        getline(allPosts, name ,'\n');//read names 
+        getline(allPosts,posts,'\n');//read posts
         if(name == logname ){
             cout<<"["<<lineCount << "]" << " " << posts << endl;
             lineCount++;
@@ -27,24 +28,27 @@ void viewposts(){
     }
 
     allPosts.close();// close the file of posts
+    //print all the posts that belong to the logged in user's friends
     cout << endl << "Your Friend's Posts are : " << endl <<string(24, '=');
     bool same ;
     ifstream user;
     user.open(logname.c_str());//open file of logged in user's friends
+
     while(!user.eof()){
-        int i =1;
+        int i = 1;//counter
         same = false;
         getline(user,Friend,'\n');
+        ifstream allPosts;
         allPosts.open("posts");
         while(!allPosts.eof()){
-            getline(allPosts,name ,'\n');
-            getline(allPosts,posts,'\n');
-            if(Friend== name && same == true){
-                cout<<"Post "<< i << ":" <<posts << endl; 
+            getline(allPosts,name ,'\n');//read the names from post file
+            getline(allPosts,posts,'\n');// read the posts from the post file
+            if(Friend == name && same == true){
+                cout<<" Post "<< i << " : " << posts << endl;
                 i++;
-            }else if(Friend == name && same == false & Friend !=""){
-                cout<<endl << "Friend : "<< name << endl;
-                cout<< "Post " << i << ":" << posts << endl;
+            }else if(Friend == name && same == false & Friend != ""){
+                cout << endl << "Friend : "<< name << endl;
+                cout<< "Post " << i << " : " << posts << endl; 
                 i++;
                 same = true;
             }

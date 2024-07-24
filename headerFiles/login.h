@@ -17,9 +17,9 @@ void login(){
         mainmenu();
     }
 
-    cout<<endl<<"Write Your Username ";
+    cout<<endl<<"Write Your Username : ";
     getline(cin, logname );
-    cout<<endl<<"Write Your Password";
+    cout<<endl<<"Write Your Password : ";
     getline(cin, logpass);
 
 

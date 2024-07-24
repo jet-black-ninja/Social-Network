@@ -25,14 +25,14 @@ void friendrequest(){
     rename("Temp","Requests");
     tempreq.close();
 
-    while(moreRequests != "Y" || moreRequests!="y"){
+    while(moreRequests != "Y" || moreRequests !="y"){
         ifstream tempReq;
         tempReq.open("TempReq");
 
         cout<<"Request From : " << endl <<string(14,'=')<<endl;
         int lineCount = 1;
         while(getline(tempReq,line ) && line != ""){
-            cout<<"[]"<<lineCount <<"]" <<line <<endl;
+            cout<<"["<<lineCount <<"]" <<line <<endl;
             lineCount++;
         }
         tempReq.close();
