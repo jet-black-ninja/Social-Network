@@ -8,6 +8,7 @@ extern string name ;
 extern string posts;
 extern string Friend;
 extern string namepost;
+//TODO infinite loop issue in replying to friend post 
 
 void viewposts(){
     //print all posts of the logged in user
